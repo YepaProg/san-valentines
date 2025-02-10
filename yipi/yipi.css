@@ -1,0 +1,150 @@
+/* colores */
+
+:root{
+    --rojo-puro: #a3000d;
+    --rojo: #dd2e0d;
+    --blanco: #FAFAFA;
+    --negro: #111;
+}
+
+
+/* estilos globales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all ease .55s;
+}
+
+
+/* body */
+
+body {
+    background-color: var(--blanco);
+}
+
+
+/* navbar */
+
+nav {
+    background-color: var(--rojo-puro);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+nav a.logo {
+    color: var(--blanco);
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+nav a.logo i {
+    font-size: 24px;
+    color: var(--rojo);
+}
+
+nav ul.menu {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul.menu li {
+    list-style: none;
+}
+
+nav ul.menu li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+nav ul.menu li a:hover {
+    color: var(--rojo);
+}
+
+nav ul.menu-responsive {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    flex-direction: column;
+}
+
+nav ul.menu-responsive li {
+    padding: 10px 0;
+    background-color: rgba(221, 46, 13, 0.5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul.menu-responsive li:hover {
+    background-color: rgba(221, 46, 13, 0.8);
+}
+
+nav ul.menu-responsive li a {
+    color: var(--blanco);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav i.bx-menu,
+nav i.bx-x{
+    display: none;
+    font-size: 24px;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+
+/* main */
+
+main {
+    background: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2s0b2JodWk0OHlmZGJ4ajJ1bHlwd24zYzF1ZDRlNXJudzYweDd0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Kwi3CtKyY5vd6/giphy.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 70px);
+}
+
+main h1 {
+    font-size: 100px;
+    color: var(--blanco);
+    padding: 20px 50px;
+    background-color: rgba(0163, 0, 13, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+}
+
+
+
+/* responsive */
+
+@media (max-width: 800px) {
+    nav ul.menu {
+        display: none;
+    }
+
+    nav i.bx-menu,
+    nav i.bx-x{
+        display: block;
+    }
+}
