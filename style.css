@@ -1,0 +1,557 @@
+/* colores */
+
+:root{
+    --rojo-puro: #a3000d;
+    --rojo: #dd2e0d;
+    --blanco: #FAFAFA;
+    --negro: #111;
+    --post-it: #fcea94;
+}
+
+
+/* estilos globales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all ease .55s;
+}
+
+
+/* body */
+
+body {
+    background-color: var(--blanco);
+}
+
+.volverarriba{
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    font-size: 45px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    z-index: 999;
+}
+
+.volverarriba:hover {
+    transform: scale(1.1);
+}
+
+
+/* navbar */
+
+nav {
+    background-color: var(--rojo-puro);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+nav a.logo {
+    color: var(--blanco);
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+nav a.logo i {
+    font-size: 24px;
+    color: var(--rojo);
+}
+
+nav ul.menu {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul.menu li {
+    list-style: none;
+}
+
+nav ul.menu li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+nav ul.menu li a:hover {
+    color: var(--rojo);
+}
+
+nav ul.menu-responsive {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    flex-direction: column;
+    z-index: 999;
+}
+
+nav ul.menu-responsive li {
+    padding: 10px 0;
+    background-color: rgba(221, 46, 13, 0.5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul.menu-responsive li:hover {
+    background-color: rgba(221, 46, 13, 0.8);
+}
+
+nav ul.menu-responsive li a {
+    color: var(--blanco);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav i.bx-menu,
+nav i.bx-x{
+    display: none;
+    font-size: 24px;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+
+/* header */
+
+header{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/banner-home.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+header .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(221, 46, 13, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    width: 70%;
+    border-radius: 20px;
+    color: var(--blanco);
+}
+
+header .content h1 {
+    font-size: 55px;
+    text-align: center;
+}
+
+header .content p {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* From Uiverse.io by elijahgummer */ 
+header .content button {
+    font: inherit;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.35rem;
+    padding: 0.375em 1em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #fff;
+    box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+                0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+                0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+    transition: 0.15s ease;
+    cursor: pointer;
+    margin: 10px 0 20px 0;
+}
+header .content button:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+                0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+                0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
+
+
+/* wanna be my valentine's */
+
+.wannabe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    height: 200px;
+    background-color: var(--rojo-puro);
+}
+
+.wannabe h2 {
+    font-size: 40px;
+    color: var(--blanco);
+}
+
+.wannabe .buttons button {
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    border: var(--blanco) 3px solid;
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.wannabe .buttons button.no {
+    transition: none;
+    cursor: default;
+}
+
+.wannabe .buttons button.no:hover,
+.wannabe .buttons button.no:active {
+    opacity: 0;
+}
+
+.wannabe .buttons button:hover {
+    background-color: var(--blanco);
+    color: var(--rojo-puro);
+}
+
+.wannabe .buttons button:first-child {
+    margin-right: 20px;
+}
+
+
+/* gallery */
+
+.gallery {
+    text-align: center;
+    padding: 40px 0;
+    background-color: var(--blanco);
+}
+
+.gallery h2 {
+    font-size: 50px;
+    color: var(--rojo-puro);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.swiper {
+    width: 80%;
+    max-width: 600px;
+    height: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery p {
+    font-size: 20px;
+    width: 900px;
+    margin: 20px auto 0 auto;
+}
+
+
+/* timeline */
+
+.timelinesection {
+    background-color: var(--rojo-puro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.timelinesection h2.heading {
+    font-size: 50px;
+    color: var(--blanco);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* 🕒 Línea de tiempo */
+.timelinesection .timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 📍 Evento */
+.timelinesection .event {
+    position: relative;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+/* ✨ Cuando el evento se hace visible */
+.timelinesection .event.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 📜 Contenido */
+.timelinesection .content {
+    background: var(--blanco);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.timelinesection .content h2 {
+    color: #d43b5d;
+}
+
+.timelinesection .content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* 📸 Imagen */
+.timelinesection .content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+/* reasons */
+
+.reasons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+.reasons h2 {
+    font-size: 50px;
+    color: var(--rojo-puro);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.reasons p {
+    font-size: 20px;
+    width: 950px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.reasons p:last-of-type {
+    margin-top: 50px;
+}
+
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.notes-container .note {
+    background: var(--post-it);
+    padding: 20px;
+    width: 250px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    
+    /* Efecto de papel rasgado */
+    clip-path: polygon(
+        0% 0%, 100% 0%, 
+        100% 90%, 98% 95%, 95% 97%, 90% 98%, 
+        85% 99%, 80% 98%, 75% 97%, 70% 98%, 
+        65% 99%, 60% 98%, 55% 97%, 50% 98%, 
+        45% 99%, 40% 98%, 35% 97%, 30% 98%, 
+        25% 99%, 20% 98%, 15% 97%, 10% 98%, 
+        5% 99%, 2% 95%, 0% 90%
+    );
+}
+
+/* Efecto de rotación al pasar el ratón */
+.notes-container .note:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+
+/* responsive */
+
+@media (max-width: 800px) {
+    nav ul.menu {
+        display: none;
+    }
+
+    nav i.bx-menu,
+    nav i.bx-x{
+        display: block;
+    }
+}
+
+@media (max-width: 1100px) {
+    header .content h1 {
+        font-size: 40px;
+    }
+
+    header .content p {
+        font-size: 18px;
+    }
+
+    header .content button {
+        font-size: 1rem;
+    }
+
+    .wannabe {
+        flex-direction: column;
+        gap: 20px;
+        height: 250px;
+    }
+
+    .wannabe h2 {
+        font-size: 30px;
+    }
+
+    .gallery h2 {
+        font-size: 40px;
+    }
+
+    .gallery p {
+        font-size: 18px;
+        width: 70%;
+    }
+
+    .gallery .swiper {
+        height: 600px;
+    }
+
+    .timelinesection h2.heading {
+        font-size: 40px;
+    }
+
+    .timelinesection .content h2 {
+        font-size: 24px;
+    }
+
+    .timelinesection .content p {
+        font-size: 16px;
+    }
+
+    .reasons h2 {
+        font-size: 40px;
+    }
+
+    .reasons p {
+        font-size: 18px;
+        width: 50%;
+    }
+
+    .notes-container .note {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    header .content {
+        width: 90%;
+    }
+
+    header .content h1 {
+        font-size: 30px;
+    }
+
+    header .content p {
+        font-size: 16px;
+    }
+
+    .wannabe h2 {
+        font-size: 24px;
+    }
+
+    .wannabe .buttons button {
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .gallery h2 {
+        font-size: 30px;
+    }
+
+    .gallery p {
+        font-size: 16px;
+    }
+
+    .gallery .swiper {
+        height: 400px;
+    }
+
+    .timelinesection h2.heading {
+        font-size: 30px;
+    }
+
+    .timelinesection .content h2 {
+        font-size: 20px;
+    }
+
+    .timelinesection .content p {
+        font-size: 14px;
+    }
+
+    .reasons h2 {
+        font-size: 27px;
+        width: 80%;
+    }
+
+    .reasons p {
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .notes-container .note {
+        font-size: 14px;
+    }
+}
